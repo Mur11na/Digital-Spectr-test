@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel='stylesheet' href='style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- <script src="javascript.js"></script> РАСКОММЕНТИРОВАТЬ ПРИ ПОДКЛЮЧЕНИИ js валидации-->
+    <!-- <script src="ajax.js"></script> РАСКОММЕНТИРОВАТЬ ПРИ ПОДКЛЮЧЕНИИ ajax-->
+</head>
+<body>
+    <div class='page'>
+        <div class='question'>
+            <h1>Задать вопрос</h1>
+            <form class='form' id="form" method="post" action="https://digital-spectr.com/ac/academy.php"> <!--оставить в action пустые кавычки при подключении ajax-->
+            <input class='name' name="name" type='text' pattern='[^[А-Яа-яЁё\s]+$\-]' required placeholder='Фамилия Имя Отчество *' onMouseOver="this.focus();"> <!--Убрать pattern и required при подключении js валидации во всех input-->
+            <input class='phone' name="phone" type='tel' pattern='[0-9]\s\-\+'  required placeholder='Телефон *' onMouseOver="this.focus();">
+            <input class='email' name="email" type='email' pattern='\w\@' placeholder='Email' onMouseOver="this.focus();">
+            <button class='request' id='btn' type='submit'>ОТПРАВИТЬ ЗАПРОС</button>
+            </form>
+        </div>
+    </div>
+    <!-- <div id="result_form"></div> -->
+</body>
+</html>
